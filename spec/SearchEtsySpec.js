@@ -19,8 +19,8 @@ describe("Search Etsy Spec", function(){
   })
 
   it("Parses API data to inject pieces of information into website", function(){
-    spyOn(searchEtsy, "useKeyword");
-    searchEtsy.useKeyword($url);
+    var $input = "nike";
+    var $url = searchEtsy.buildURL($input);
     expect($url).toContain($input);
   })
 })
